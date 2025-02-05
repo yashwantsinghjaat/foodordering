@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - S.S Foods</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>S.S Foods</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="checkout-container">
+        <h2>Checkout</h2>
+        
+        <div class="checkout-form">
+            <h3>Billing Details</h3>
+            <form id="checkout-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" required>
+
+                <h3>Payment Method</h3>
+                <label><input type="radio" name="payment" value="credit" required> Credit Card</label>
+                <label><input type="radio" name="payment" value="paypal" required> PayPal</label>
+                <label><input type="radio" name="payment" value="cod" required> Cash on Delivery</label>
+
+                <button type="submit">Place Order</button>
+            </form>
+        </div>
+
+        <div class="order-summary">
+            <h3>Order Summary</h3>
+            <ul id="order-items"></ul>
+            <p><strong>Total:</strong> ₹<span id="total-price">0</span></p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
